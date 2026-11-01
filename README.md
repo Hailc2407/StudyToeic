@@ -1,6 +1,6 @@
 # StudyToeic: English Room
 
-Phòng học tiếng Anh (TOEIC và Grammar) cho hai người học cùng nhau, chạy trên GitHub Pages:
+Phòng học tiếng Anh (TOEIC và Grammar) chạy trên GitHub Pages:
 **https://hailc2407.github.io/StudyToeic/**
 
 Lối vào khác: phím tắt **Ctrl + Shift + L** trên https://hailc2407.github.io/, hoặc link cũ
