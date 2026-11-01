@@ -1,7 +1,7 @@
 // Browser check of the study room (Playwright + the pre-installed Chromium).
 //
-//   serve the PARENT of the repo so the page lives at /StudyToeic/ like on GitHub Pages:
-//   (cd .. && python3 -m http.server 8765 >/dev/null 2>&1 &)
+//   serve the repo at /StudyToeic/ like on GitHub Pages (any clone folder name):
+//   mkdir -p /tmp/serve && ln -sfn "$PWD" /tmp/serve/StudyToeic && (cd /tmp/serve && python3 -m http.server 8765 >/dev/null 2>&1 &)
 //   node .claude/skills/english-room/scripts/test_lessons.js [g05 g06 …] [--shots=<dir>]
 //
 // With no ids it opens every lesson in the vault index. For each lesson: the page must render

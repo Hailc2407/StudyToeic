@@ -49,8 +49,8 @@ Paths: `K=.claude/skills/english-room/scripts` (run everything from the StudyToe
 5. **Build + encrypt**: `VSRC=$VSRC $K/publish.sh $W/gNN_content.py curriculum-grammar.json N`
    (build_lesson.py stops on wrong blanks/options/fix words/missing images; `mark N` turns plan N into used N).
    If the units had no plan entry, add them first with `curriculum.py $VSRC/curriculum-grammar.json add …`.
-6. **Test**: serve the repo's parent so the site is at `/StudyToeic/` as on GitHub Pages:
-   `(cd .. && python3 -m http.server 8765 >/dev/null 2>&1 &)` (the clone folder must be named `StudyToeic`), then
+6. **Test**: serve the repo under `/StudyToeic/` as on GitHub Pages (works whatever the clone folder is called):
+   `mkdir -p /tmp/serve && ln -sfn "$PWD" /tmp/serve/StudyToeic && (cd /tmp/serve && python3 -m http.server 8765 >/dev/null 2>&1 &)`, then
    `node $K/test_lessons.js gNN` (and with no ids before pushing: all lessons).
    Must print `ALL OK`. Look at one screenshot (`--shots=<dir>`) of a new kind of block. Never `pkill -f http.server`
    inside a chained command (it kills the shell); just leave the server running.
