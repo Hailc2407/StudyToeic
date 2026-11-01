@@ -33,5 +33,6 @@ Sách và audio gốc nằm trong repo riêng tư `Hailc2407/toeic-materials`.
 ## Chạy thử ở máy
 
 ```bash
-cd .. && python3 -m http.server 8765    # rồi mở http://localhost:8765/StudyToeic/
+mkdir -p /tmp/serve && ln -sfn "$PWD" /tmp/serve/StudyToeic
+cd /tmp/serve && python3 -m http.server 8765    # rồi mở http://localhost:8765/StudyToeic/
 ```
